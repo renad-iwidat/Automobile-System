@@ -9,8 +9,8 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         // Create the engine instances
-        Engine carEngine = new Engine("Toyota", new Date(), "V6", 3000, 6, FuelType.GASOLINE);
-        Engine motorcycleEngine = new Engine("Honda", new Date(), "Inline 4", 600, 4, FuelType.GASOLINE);
+        Engine carEngine = new Engine("Toyota", new Date(), "V7", 3000, 6, FuelType.GASOLINE);
+        Engine motorcycleEngine = new Engine("Honda", new Date(), "Inline 6", 600, 4, FuelType.GASOLINE);
         Engine truckEngine = new Engine("Ford", new Date(), "V8", 5000, 8, FuelType.DIESEL);
 
         // Create the vehicles
