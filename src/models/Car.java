@@ -2,21 +2,34 @@ package models;
 
 import enums.GearType;
 import java.awt.Color;
+import java.time.LocalDate;
 
 public class Car extends Vehicle {
     private int chairNum;
     private boolean isFurnitureLeather;
 
-    public Car() {}
+    // Default constructor
+    public Car() {
+        super();
+        this.chairNum = 0;
+        this.isFurnitureLeather = false;
+    }
 
-    public Car(String manufactureCompany, int length, int width, int chairNum, boolean isFurnitureLeather) {
-        super(manufactureCompany, null, null, 0, GearType.NORMAL, 0, length, width, Color.BLACK);
+    // Full argument constructor
+    public Car(String manufactureCompany, LocalDate manufactureDate, String model, Engine engine, int plateNum, GearType gearType, int bodySerialNum, int length, int width, Color color, int chairNum, boolean isFurnitureLeather) {
+        super(manufactureCompany, manufactureDate, model, engine, plateNum, gearType, bodySerialNum, length, width, color);
         this.chairNum = chairNum;
         this.isFurnitureLeather = isFurnitureLeather;
     }
 
-    public int getChairNum() { return chairNum; }
-    public boolean isFurnitureLeather() { return isFurnitureLeather; }
+    // Getters
+    public int getChairNum() {
+        return chairNum;
+    }
+
+    public boolean isFurnitureLeather() {
+        return isFurnitureLeather;
+    }
 
     @Override
     public String toString() {
